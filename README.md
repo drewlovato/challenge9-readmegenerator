@@ -1,18 +1,25 @@
 
   #Title
-  Read Me Generator
+  README.md File Generator
+
   #Description
-  ** Creating an app and generates a README.md page
+  ** This code is used to generate a read me markdown file for any user who wants to create and decent read me file for thier project.
+
   #Installation
-  ** Follow the prompts in the terminal to create a read me page.
+  ** Input all answers to the following questions and press enter to submit them.
+
   #Usage
-  ** This is a school challenge assignment.
+  ** DU Fullstack Web Design Bootcamp
+
   #Contribution
-  ** I coded all the documents.
+  ** I coded all aspects of this project.
+
   #Testing
-  ** Open README.md page when you are done filling out the prompted questions.
+  ** Go through the prompts to test its features.
+
   #Liscencing
   ** The MIT Liscence
+
   #QUESTIONS
   *GitHub: @drewlovato
   *Email: andrewlovatodu@gmail.com

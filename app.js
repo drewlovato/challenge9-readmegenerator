@@ -12,22 +12,21 @@ const buildHTML = ({
   git,
   email,
 }) => `
-  #Title
-  ${title}
+  # ${title}\n
   #Description
-  ** ${description}
+  ** ${description}\n
   #Installation
-  ** ${install}
+  ** ${install}\n
   #Usage
-  ** ${usage}
+  ** ${usage}\n
   #Contribution
-  ** ${contribution}
+  ** ${contribution}\n
   #Testing
-  ** ${test}
+  ** ${test}\n
   #Liscencing
-  ** ${liscence}
-  #QUESTIONS
-  *GitHub: ${git}
+  ** ${liscence}\n
+  #QUESTIONS\n
+  *GitHub: ${git}\n
   *Email: ${email}`;
 
 inquirer
