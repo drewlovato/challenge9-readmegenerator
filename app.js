@@ -12,22 +12,38 @@ const buildHTML = ({
   git,
   email,
 }) => `
-  # ${title}\n
-  #Description
-  ** ${description}\n
-  #Installation
-  ** ${install}\n
-  #Usage
-  ** ${usage}\n
-  #Contribution
-  ** ${contribution}\n
-  #Testing
-  ** ${test}\n
-  #Liscencing
-  ** ${liscence}\n
-  #QUESTIONS\n
-  *GitHub: ${git}\n
-  *Email: ${email}`;
+# ${title}
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#Usage)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
+
+### Description\n
+  - ${description}\n
+
+### Installation\n
+  - ${install}\n
+
+### Usage\n
+  - ${usage}\n
+
+### Contribution\n
+  - ${contribution}\n
+
+### Tests\n
+  - ${test}\n
+
+### License\n
+  - ${liscence}\n
+
+### Questions\n
+  - GitHub: ${git}\n
+  - Email: ${email}`;
 
 inquirer
   .prompt([
@@ -99,7 +115,7 @@ inquirer
     {
       type: "input",
       message: "Are there any test instructions for this project?",
-      name: "test",
+      name: "tests",
       // this checks if the user enters a title into prompt
       validate: (value) => {
         if (value) {
