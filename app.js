@@ -40,6 +40,7 @@ const buildHTML = ({
 
 ### License\n
   - ${license}\n
+  ${renderLicenseBadge(data.license)}\n
 
 ### Questions\n
   - GitHub: ${git}\n
@@ -172,16 +173,16 @@ inquirer
     },
   ])
   .then((answers) => {
-    fs.writeFile("./README.md", buildHTML(answers), (err) =>
+    fs.writeFile("./README.md", buildHTML(answers, license), (err) =>
       err ? console.error(err) : console.log("Success!")
     );
   });
 
 // render badge for license
-// function renderLicenseBadge(license) {
-//   if(license !== 'no license used'){
-//     return `![badge](https://img.shields.io/badge/license-${license}-blue )`;
-//   } else{
-//     return ' ';
-//   }
-// };
+function renderLicenseBadge(license) {
+  if (license !== "no license used") {
+    return `![badge](https://img.shields.io/badge/license-${license}-blue )`;
+  } else {
+    return " ";
+  }
+}
