@@ -8,7 +8,7 @@ const buildHTML = ({
   usage,
   contribution,
   test,
-  liscence,
+  license,
   git,
   email,
 }) => `
@@ -17,7 +17,7 @@ const buildHTML = ({
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#Usage)
+- [Usage](#usage)
 - [Contribution](#contribution)
 - [Tests](#tests)
 - [License](#license)
@@ -39,7 +39,7 @@ const buildHTML = ({
   - ${test}\n
 
 ### License\n
-  - ${liscence}\n
+  - ${license}\n
 
 ### Questions\n
   - GitHub: ${git}\n
@@ -128,19 +128,19 @@ inquirer
     {
       type: "list",
       message: "What liscense did you use for your project?",
-      name: "liscence",
+      name: "license",
       choices: [
-        "The GPL Liscence",
-        "The MIT Liscence",
-        "Apache Liscence",
-        "The GNU Liscence",
+        "The GPL License",
+        "The MIT License",
+        "Apache License",
+        "The GNU License",
         "N/A",
       ],
       validate: (value) => {
         if (value) {
           return true;
         } else {
-          return "Please choose a liscence to continue. If you did not use a liscence please choose N/A";
+          return "Please choose a License to continue. If you did not use a License please choose N/A";
         }
       },
     },
@@ -176,3 +176,12 @@ inquirer
       err ? console.error(err) : console.log("Success!")
     );
   });
+
+// render badge for license
+// function renderLicenseBadge(license) {
+//   if(license !== 'no license used'){
+//     return `![badge](https://img.shields.io/badge/license-${license}-blue )`;
+//   } else{
+//     return ' ';
+//   }
+// };
